@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const Resto = require('./Struct/Restaurants')
 const Jdr = require('./Struct/AffinityJdr')
+const fs = require('fs');
 
 const client = new Discord.Client();
 
@@ -101,4 +102,4 @@ client.on('message', msg => {
   }
 });
 
-client.login('NzE1OTA1NTM5OTIxNjc0Mjcx.XtEHSA.39zEkEfzdpHeTegrnrwRJ8GWHVw');
+client.login(fs.readFileSync('../token.txt', 'utf8'));
