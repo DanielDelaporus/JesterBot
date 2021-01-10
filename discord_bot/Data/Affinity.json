@@ -1,0 +1,116 @@
+{
+    "CharacterAffinity": [
+        {
+            "Name": "Lewnfay",
+            "Value": 5,
+            "Reveal": true
+        },
+        {
+            "Name": "Tolderyx",
+            "Value": -6,
+            "Reveal": true
+        },
+        {
+            "Name": "Fran L'Elusive",
+            "Value": 1,
+            "Reveal": false
+        },
+        {
+            "Name": "Roi Clavis",
+            "Value": 1,
+            "Reveal": true
+        },
+        {
+            "Name": "Mathias L'Eternel",
+            "Value": 2,
+            "Reveal": true
+        },
+        {
+            "Name": "Edwin L'Apprenti",
+            "Value": 1,
+            "Reveal": false
+        },
+        {
+            "Name": "Kelf L'Apprenti",
+            "Value": -2,
+            "Reveal": false
+        },
+        {
+            "Name": "Yash L'Apprenti",
+            "Value": 0,
+            "Reveal": true
+        },
+        {
+            "Name": "Roi Vernal",
+            "Value": -2,
+            "Reveal": false
+        },
+        {
+            "Name": "Roi Laslo",
+            "Value": 1,
+            "Reveal": false
+        },
+        {
+            "Name": "Zephyr",
+            "Value": -7,
+            "Reveal": false
+        },
+        {
+            "Name": "Sparks",
+            "Value": 2,
+            "Reveal": false
+        },
+        {
+            "Name": "Cymbeline",
+            "Value": 3,
+            "Reveal": true
+        }
+    ],
+    "FactionAffinity": [
+        {
+            "Name": "Démons",
+            "Value": 3,
+            "Reveal": true
+        },
+        {
+            "Name": "Marchands de Sable",
+            "Value": -3,
+            "Reveal": true
+        },
+        {
+            "Name": "Hylgarm",
+            "Value": 2,
+            "Reveal": true
+        },
+        {
+            "Name": "Xadia",
+            "Value": 1,
+            "Reveal": true
+        },
+        {
+            "Name": "Harde",
+            "Value": 0,
+            "Reveal": true
+        },
+        {
+            "Name": "Eoliens",
+            "Value": -2,
+            "Reveal": true
+        },
+        {
+            "Name": "Calderos",
+            "Value": 2,
+            "Reveal": true
+        },
+        {
+            "Name": "Rocbane",
+            "Value": 6,
+            "Reveal": true
+        },
+        {
+            "Name": "Ordre du Bec de fer",
+            "Value": 4,
+            "Reveal": true
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+[
+    {
+        "Name": "OZaman - Kebab",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Rue de Fontainebleau"
+    },
+    {
+        "Name": "Five Pizza",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Rue de Fontainebleau"
+    },
+    {
+        "Name": "Mac Donald",
+        "Cheap": false,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "KFC - Du Poulet",
+        "Cheap": false,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "Domino's - Pizza",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "Subway - Sandwich",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "Why not - Burger",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Rue de Fontainebleau"
+    },
+    {
+        "Name": "Au Petit Wok - Traiteur Chinois",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "City Crêpe",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Rue de Fontainebleau"
+    },
+    {
+        "Name": "Sumaya - Jap' à volonté",
+        "Cheap": false,
+        "Healthy": true,
+        "Location": "Avenue de Verdun"
+    },
+    {
+        "Name": "Boulangerie",
+        "Cheap": true,
+        "Healthy": true,
+        "Location": "Rue Roger Salengro"
+    },
+    {
+        "Name": "Viet Gourmet - Resto Viet",
+        "Cheap": false,
+        "Healthy": true,
+        "Location": "Avenue de Verdun"
+    },
+    {
+        "Name": "Hipopotamus - De la Viande",
+        "Cheap": false,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "Wong Heng - Cantine Chinoise",
+        "Cheap": true,
+        "Healthy": true,
+        "Location": "Porte de Choisy"
+    },
+    {
+        "Name": "Sésame et sel - Restaurant Coréen",
+        "Cheap": false,
+        "Healthy": true,
+        "Location": "Rue Roger Salengro"
+    },
+    {
+        "Name": "Pizzeria Fratello",
+        "Cheap": false,
+        "Healthy": false,
+        "Location": "Rue de Fontainebleau"
+    },
+    {
+        "Name": "Le Club - Sandwicherie",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Okabe"
+    },
+    {
+        "Name": "Cafette",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Cour d'Epitech"
+    },
+    {
+        "Name": "Superette - Liddle",
+        "Cheap": true,
+        "Healthy": false,
+        "Location": "Rue de Fontainebleau"
+    }
+]

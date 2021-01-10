@@ -1,0 +1,26 @@
+{
+    "Popularité": 5,
+    "Puissance": 2,
+    "Argent": 1,
+    "Stabilité": -1,
+    "Connaissance": 1,
+    "Population": 3,
+    "Batiments": [
+        {
+            "Name": "Murs",
+            "level": 0
+        },
+        {
+            "Name": "Port",
+            "level": 1
+        },
+        {
+            "Name": "Hotel De Ville",
+            "level": 0
+        },
+        {
+            "Name": "Bibliothèque",
+            "level": 0
+        }
+    ]
+}
