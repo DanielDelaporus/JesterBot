@@ -1,14 +1,14 @@
 {
     "Popularité": 5,
-    "Puissance": 2,
+    "Puissance": 5,
     "Argent": 1,
     "Stabilité": -1,
-    "Connaissance": 1,
-    "Population": 3,
+    "Connaissance": 2,
+    "Population": 4,
     "Batiments": [
         {
-            "Name": "Murs",
-            "level": 0
+            "Name": "Murs Tour BaieDef",
+            "level": 1
         },
         {
             "Name": "Port",

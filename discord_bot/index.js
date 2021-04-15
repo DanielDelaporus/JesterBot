@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const Resto = require('./Struct/Restaurants')
 const Jdr = require('./Struct/AffinityJdr')
+const Genshin = require('./Struct/Genshin')
+const Alert = require('./Struct/Alert')
 const fs = require('fs');
 
 const client = new Discord.Client();
@@ -14,6 +16,26 @@ client.on('ready', () => {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
+
+client.setInterval( async () => {
+  const time = Date.now()
+  const data = fs.readFileSync('Data/Alert.json', 'utf8');
+  const Database = JSON.parse(data);
+  Database.alert_data.forEach(async alert => {
+      if ((Math.floor(alert.when / 1000) < Math.floor(time / 1000)) && !alert.rang) {
+          alert.rang = true;
+          fs.writeFileSync("Data/Alert.json", JSON.stringify(Database, null, 2));
+          console.log("Alerte !")
+          const embeds = new Discord.MessageEmbed()
+          .setColor('#ff1a1a')
+          .setTitle('DING DING DING ! \"' + alert.Title + '\" !')
+          const chan = await client.channels.fetch(alert.chan.id)
+          const author = await client.users.fetch(alert.author.id)
+          chan.send("@everyone", embeds)
+          return embeds
+      }
+  });
+}, 1000)
 
 client.on('message', msg => {
   if (msg.content === '!kiri') {
@@ -92,7 +114,7 @@ client.on('message', msg => {
     const embeds = new Discord.MessageEmbed()
     .setColor('#990000')
     .setTitle('All available commands')
-    .setDescription('!ping\n!jester\n!info\n!hide\n!show\n!help\n!resto\n!affinity\n!rocbane');
+    .setDescription('!ping\n!jester\n!info\n!hide\n!show\n!help\n!resto\n!affinity\n!rocbane\n!genshin');
     msg.channel.send(embeds);
   }
 
@@ -100,6 +122,57 @@ client.on('message', msg => {
     const type = msg.content.split(" ")[1];
     msg.channel.send(Resto.getResto(type))
   }
+  if (msg.content.includes("!resine")) {
+    const action = msg.content.split(" ")[1];
+    const number = msg.content.split(" ")[2];
+    if (!action || action === "set" && !number) {
+      const embeds = new Discord.MessageEmbed()
+      .setColor('#a8c6f9')
+      .setTitle('Genshin Resine Help')
+      .setDescription('type \"!resine\" followed by the action you want to do (get or set)...\nIf you want to set, specify at which number you want to set it...\n(exemple: \"!resine set 160\")')
+      msg.channel.send(embeds)
+    }
+    else {
+      Genshin.ManageResine(action, number, msg.author, msg.channel);
+    }
+  }
+  if (msg.content.includes("!genshin")) {
+    const type = msg.content.split(" ")[1];
+    if (!type) {
+      const embeds = new Discord.MessageEmbed()
+      .setColor('#990000')
+      .setTitle('Genshin Builds Help')
+      .setDescription('type \"!genshin\" followed by the name of the character to access their build...\n(exemple: \"!genshin albedo\")')
+      msg.channel.send(embeds)
+    }
+    else
+      Genshin.DisplayBuild(type, msg.channel);
+  }
+  if (msg.content.includes("!alert empty")) {
+    const data = fs.readFileSync('Data/Alert.json', 'utf8');
+    const Database = JSON.parse(data);
+    Database.alert_data.clear();
+    fs.writeFileSync("Data/Alert.json", JSON.stringify(Database, null, 2));
+  }
+  if (msg.content.includes("!alert")) {
+    const date = msg.content.split(" ")[1];
+    const hour = msg.content.split(" ")[2];
+    var title = "";
+
+    for (let i = 3; i < msg.content.split(" ").length; i++)
+      title += msg.content.split(" ")[i] + " "; 
+
+    if (!title || !date || !hour) {
+      const embeds = new Discord.MessageEmbed()
+      .setColor('#990000')
+      .setTitle('Alert Help')
+      .setDescription('type \"!alert\" followed by the Title of the Alert and the date and hour (ex: Title MM-DD-YYYY HH:MM)')
+      msg.channel.send(embeds)
+    }
+    else
+      Alert.SetAlert(title, date, hour, msg.author, msg.channel);
+  }
+ 
 });
 
 client.login(fs.readFileSync('../token.txt', 'utf8'));

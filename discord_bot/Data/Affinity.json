@@ -2,7 +2,7 @@
     "CharacterAffinity": [
         {
             "Name": "Lewnfay",
-            "Value": 5,
+            "Value": 4,
             "Reveal": true
         },
         {
@@ -84,7 +84,7 @@
         },
         {
             "Name": "Xadia",
-            "Value": 1,
+            "Value": 2,
             "Reveal": true
         },
         {
@@ -109,7 +109,7 @@
         },
         {
             "Name": "Ordre du Bec de fer",
-            "Value": 4,
+            "Value": 3,
             "Reveal": true
         }
     ]
